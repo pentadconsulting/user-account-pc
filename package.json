@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "npm package for login and signup ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "npm run test"
   },

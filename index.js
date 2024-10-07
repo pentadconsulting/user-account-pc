@@ -3,7 +3,6 @@ import axios from 'axios';
 
 
 export async function signup (url, username, password){
-    alert("i am in signup page");
     try {
         console.log("i am in sign up");
         const response = await axios.post(url, {
@@ -12,14 +11,18 @@ export async function signup (url, username, password){
             
         });
         
+        if (!response.ok) {
+             throw new Error('Network response was not ok');
+        }
+        
         return response.data;
-    } catch (error) {
+    } 
+    catch (error) {
         console.error(error);
     }
 };
 
 export async function login (url,username, password){
-    alert("i am in login page");
 
     try {
         console.log("i am in login");
@@ -28,6 +31,11 @@ export async function login (url,username, password){
             password: password,
             
         });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+       
         return response.data;
 
     } catch (error) {
