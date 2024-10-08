@@ -12,11 +12,13 @@ export async function signup (url, username, password){
           'accept': '*/*',
           'Content-Type': 'application/json',
         },
-      });
+      }
+    );
       
-      if (!response.ok) {
+      if (!response) {
         throw new Error('Network response was not ok');
       }
+      return response.data;
     }
     catch (error) {
         console.error(error);
