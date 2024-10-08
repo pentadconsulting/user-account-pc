@@ -2,14 +2,14 @@
   "name": "user-account-pc",
   "version": "1.2.0",
   "description": "npm package for login and signup ",
-  "main": "Auth.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "test": "npm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pentadconsulting/user-account-pc.git"
+    "url": "https://github.com/pentadconsulting/user-account-pc.git"
   },
   "keywords": [
     "login",

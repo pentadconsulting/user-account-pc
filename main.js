@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-export async function signup (url, username, password){
+ async function signup (url, username, password){
     debugger;
     console.log("signUp page")
     try{
@@ -30,7 +30,7 @@ export async function signup (url, username, password){
     }
 };
 
-export async function login (url,username, password){
+ async function login (url,username, password){
     console.log("in login")
     debugger;
 
@@ -55,4 +55,6 @@ export async function login (url,username, password){
         console.log(error);   
     }
 };
+
+export {signup , login};
 
