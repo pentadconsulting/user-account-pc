@@ -3,6 +3,8 @@ import axios from 'axios';
 
 
 export async function signup (url, username, password){
+    debugger;
+    alert("signUp page")
     try{
         const response = await axios.post(url, {
         userName: username,
@@ -14,7 +16,10 @@ export async function signup (url, username, password){
         },
       }
     );
-      
+
+    
+      alert(response);
+      debugger;
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -26,6 +31,8 @@ export async function signup (url, username, password){
 };
 
 export async function login (url,username, password){
+    alert("in login")
+    debugger;
 
     try {
         console.log("i am in login");
@@ -34,6 +41,9 @@ export async function login (url,username, password){
             password: password,
             
         });
+        
+        alert(response);
+        debugger;
 
         if (!response.ok) {
             throw new Error('Network response was not ok');
