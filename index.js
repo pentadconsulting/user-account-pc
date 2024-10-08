@@ -15,7 +15,7 @@ export async function signup (url, username, password){
       }
     );
       
-      if (!response) {
+      if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       return response.data;
